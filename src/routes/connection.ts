@@ -7,7 +7,7 @@ export default Router().get('/:id/:username', (req, res) => {
         const user = room.users.find(u => u.username == req.params.username)
         if (user) {
             user.lastPing = Date.now()
-            res.send()
+            res.send({user: user, board: room.getGrid()})
         } else res.status(404).send()
     } else {
         res.status(404).send()
