@@ -1,16 +1,21 @@
+import './hud.js'
+
 const roomId = localStorage.getItem('roomId')
 const username = localStorage.getItem('username')
 let time
 
 if (roomId) {
+    const grid = document.querySelector('#grid')
+
     for (let x = 0; x < 16; x++) {
         for (let y = 0; y < 16; y++) {
             let div = document.createElement('div')
             div.id = `${x},${y}`
             div.className = 'cell'
-            document.body.appendChild(div)
+            grid.appendChild(div)
         }
     }
+
     pingLoop()
 } else {
     window.open('../', '_self')
@@ -31,10 +36,13 @@ async function pingLoop() {
 }
 
 /**
- * @param {{user: any, grid: any[]}} game 
+ * @param {{user: any, board: any[]}} game 
  */
 function gameLoop(game) {
-    for (const cell of game.grid) {
-        let div = document.querySelector(`${cell.x},${cell.y}`)
+    if (game.board.length) {
+        for (const cell of game.board) {
+            let div = document.querySelector(`${cell.x},${cell.y}`)
+            //mostrar bixos na grid
+        }
     }
 }

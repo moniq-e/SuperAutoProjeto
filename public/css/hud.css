@@ -1,0 +1,39 @@
+#hud {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+    width: calc(100vw - 2px);
+    height: 10vh;
+    border: 1px solid black;
+}
+
+#hud div {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.card {
+    background-color: red;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+#nav {
+    background-color: yellow;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(90vh - 2px);
+    width: 10vw;
+    left: 0;
+    top: 0;
+}
+
+#nav div {
+    background-color: red;
+    margin: auto;
+}
