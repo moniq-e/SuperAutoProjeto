@@ -11,7 +11,6 @@ if (roomId) {
         for (let y = 0; y < 16; y++) {
             let div = document.createElement('div')
             div.id = `${x},${y}`
-            div.className = 'cell'
             grid.appendChild(div)
         }
     }
